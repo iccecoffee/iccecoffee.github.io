@@ -1,1 +1,44 @@
-body{font-family:"Open Sans",Helvetica,Arial,sans-serif;background:#fff;color:#666}.welcome{width:350px;margin:0 auto;text-align:center}.welcome h1{text-shadow:rgba(102,102,102,0.49)}.avatar-box{width:100px;height:100px;margin:35px auto 0 auto}.avatar-box img{width:80px;height:80px;margin:5px;border-radius:50%}.avatar-box img:hover{opacity:.7}
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  font-size: 16px;
+}
+header {
+  padding: 25px;
+}
+header h1,
+header h2 {
+  margin: 0.2em 0;
+}
+header h1 {
+  font-weight: 700;
+  line-height: 1;
+  font-size: 2em;
+}
+header h2 {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+}
+header ul {
+  list-style: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
+header ul li {
+  display: inline-block;
+  float: left;
+}
+header ul li a {
+  text-decoration: none !important;
+  color: #42bdc2 !important;
+  font-weight: 600;
+  line-height: 2.5em !important;
+}
+header ul li a:hover {
+  color: #333 !important;
+}
