@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Maulana Agung - Web Designer & Front End Developer</title>
 
+    <style> [data-sr] { visibility: hidden; } </style>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
 
+    <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -22,11 +24,11 @@
 <body>
 
 <header itemscope itemtype="http://data-vocabulary.org/Person">
-    <h1 itemprop="name">Maulana Agung</h1>
-    <h2 itemprop="title">Web Designer & Front End Developer</h2>
+    <h1 itemprop="name" data-sr="enter left please, and hustle 20px">Maulana Agung</h1>
+    <h2 itemprop="title" data-sr="wait 0.5s and then ease-in-out 100px">Web Designer & Front End Developer</h2>
     <ul>
         <li>
-            <a href="mailto:iccecoffee@gmail.com?subject=Hey Maulana">iccecoffee@gmail.com</a>
+            <a data-sr="enter top and scale 80% over 2s" href="mailto:iccecoffee@gmail.com">iccecoffee@gmail.com</a>
         </li>
     </ul>
 
@@ -47,6 +49,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-</body>
 
+<script src="assets/js/scrollReveal.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
 </html>
