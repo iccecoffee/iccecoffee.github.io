@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maulana Agung</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --slate-600: #002a41;
+            --slate-500: #32566a;
+            --teal-500: #1b9caa;
+            --gray-100: #f2f3f6;
+            --white: white;
+            --teal-600: #008393;
+            --slate-400: #6992a9;
+            --yellow: #fffd54;
+            --papaya: #f6906b;
+            --gray-500: #809baa;
+            --slate-700: #002336;
+            --gray-300: #e8eaee;
+            --gray-400: #b2c1c9;
+            --orange-500: #e5774b;
+            --red: #fc6262;
+            --lime: #4daa57;
+            background: #f5f5f5;
+        }
+    
+        * {
+            box-sizing: border-box;
+        }
+    
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    
+        body {
+            font-family: "Afacad Flux", sans-serif;
+            font-size: 18px;
+        }
+    
+        .brand h2 {
+            font-size: 36px;
+            margin: 0 0 5px;
+            color: var(--slate-600);
+            line-height: 1;
+        }
+
+        .brand h2 span {
+            color: var(--teal-600);
+        }
+
+        .brand p{
+            margin: 0;
+            line-height: 1;
+            font-size: 16px;
+            color: var(--teal-600);
+        }
+        .brand p::before{
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 10px;
+            background: var(--lime);
+            margin-bottom: 2px;
+            margin-right: 4px;
+        }
+
+
+        header .wrapper{
+            padding-top: 32px;
+            padding-bottom: 32px;
+            position: relative;
+        }
+        .brand a{
+            border: 2px solid var(--teal-600);
+            background-color: var(--teal-600);
+            color: var(--white);
+            border-radius: 5px;
+            padding: 6px 16px;
+            text-decoration: none;
+            position: absolute;
+            top: 32px;
+            right: 16px;
+            line-height: 1;
+        }
+        .brand a:hover{
+            background-color: var(--teal-500);
+            color: var(--white);
+        }
+
+        .wrapper{
+            padding-left: 16px;
+            padding-right: 16px;
+            max-width: 890px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero{
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .hero p{
+            font-size: 22px;
+        }
+
+        h1{
+            margin-top: 0;
+            margin-bottom: .5rem;
+            font-size: 35px;
+            font-family: "Afacad Flux", sans-serif;
+            color: var(--slate-600);
+        }
+        h2, h3{
+            font-family: "Afacad Flux", sans-serif;
+            font-weight: 700;
+            color: var(--slate-600);
+            margin: 0 0 .75rem;
+            font-size: 24px;
+        }
+        strong{
+            font-weight: 700;
+            color: var(--slate-600);
+        }
+        h2 em{
+            font-style: normal;
+            color: var(--red);
+        }
+        p{
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: var(--slate-500);
+            font-size: 20px;
+        }
+
+        .portfolio{
+            padding-bottom: 60px;
+        }
+        .grid{
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+
+        .grid-item{
+            padding-left: 5px;
+            padding-right: 5px;
+            width: 50%;
+            margin-bottom: 10px;
+            float: left;
+        }
+        .img{
+            display: block;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        img{
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        .clearfix{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .footer-top{
+            position: relative;
+            background: var(--slate-600);
+            color: var(--gray-400);
+        }
+        .footer-top .wrapper{
+            position: relative;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .footer-top h2{
+            color: var(--white);
+        }
+        footer{
+            padding-top: 16px;
+            padding-bottom: 16px;
+            background: var(--slate-700);
+            color: var(--teal-500);
+            text-align: center;
+            font-size: 14px;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .hilight-red{
+            font-style: normal;
+            color: var(--red);
+        }
+        .hilight-lime{
+            font-style: normal;
+            color: var(--lime);
+        }
+        .hilight-papaya{
+            font-style: normal;
+            color: var(--papaya);
+        }
+        .hilight-teal{
+            font-style: normal;
+            color: var(--teal-500);
+        }
+
+        .feature{
+            margin-bottom: 60px;
+        }
+        @media(min-width: 992px){
+            .grid-item{
+                width: 33.333333%;
+            }
+        }
+        @media(min-width: 767px){
+            .grid-item{
+                width: 25%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="brand">
+        <div class="wrapper">
+            <h2><span>Maulana</span> Agung</h2>
+            <p>Available for work</p>
+            <a href="mailto:iccecoffee@gmail.com">Get in touch</a>
+        </div>
+    </header>
+    <section class="hero wrapper text-center">
+        <h1>Get Your Website <em class="hilight-red">Ready</em> in <em class="hilight-teal">6 Hours or Less</em>!</h1>
+        <p>Need a website on a tight deadline? I offer fast, efficient website development services, delivering fully functional and visually appealing websites in 6 hours or less. Whether for personal or business use, you can count on high-quality results without sacrificing design or performance.</p>
+    </section>
+
+    <section class="feature">
+        <div class="wrapper">
+            <h2>Convert Any Design File to HTML5, CSS3, and JavaScript</h2>
+            <p>I accept a <strong>wide range of design files</strong>, including Figma, PSD, AI, InDesign, PNG, JPG, TXT, Word, and Excel. Whether you're working with complex designs or simple layouts, I ensure a seamless conversion to high-quality, responsive HTML5, CSS3, and JavaScript code that is optimized for all devices.</p>
+        </div>
+    </section>
+
+    <section class="feature">
+        <div class="wrapper">
+            <h2>Seamless Design File Integration with Data Source</h2>
+            <p>I specialize in matching design files, such as Figma or PSD, with efficient data source normalization and processing using Python. This approach ensures that your visual elements align perfectly with your data, resulting in high-quality outputs for web applications, <strong>HTML email templates</strong>, or <strong>PDF brochures</strong>.</p>
+        </div>
+    </section>
+
+    <section class="feature">
+        <div class="wrapper">
+            <h2>Website Migration</h2>
+            <p>I offer comprehensive <strong>website migration services</strong>, transitioning your old website to modern, <strong>responsive HTML</strong> or a content management system like <strong>WordPress</strong>. Utilizing Python for data and database migration, I ensure a seamless transition of your content, preserving functionality and optimizing performance in the new format.</p>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <div class="wrapper">
+            <h2>Over 1,000 Projects Successfully Completed Since 2014</h2>
+            <p>With a proven track record of delivering high-quality results, I have completed over 1,000 projects across various industries since 2014. My expertise spans multiple sectors, consistently meeting client needs and exceeding expectations.</p>
+            <div class="grid">
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/58c5ff69b95315bc0181e35f.jpg" alt="Project image #58c5ff69b95315bc0181e35f">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/58555db45a6a19fbb4d476e6.jpg" alt="Project image #58555db45a6a19fbb4d476e6">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/5845b1ce01286d63b07e6d98.jpg" alt="Project image #5845b1ce01286d63b07e6d98">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/582682a9b8aa4684e1c64a89.jpg" alt="Project image #582682a9b8aa4684e1c64a89">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/581b50c130643a9e3fcbfd88.jpg" alt="Project image #581b50c130643a9e3fcbfd88">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/5810ea14f3686c238cf753cb.jpg" alt="Project image #5810ea14f3686c238cf753cb">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/57fc9aff9c9cc0a063d9fd7b.jpg" alt="Project image #57fc9aff9c9cc0a063d9fd7b">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/57e6027604bedee5da430f83.jpg" alt="Project image #57e6027604bedee5da430f83">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/57d0f8120cdd7ede6523997e.jpg" alt="Project image #57d0f8120cdd7ede6523997e">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/57b899d924de078c3f668915.jpg" alt="Project image #57b899d924de078c3f668915">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/57ab51e0de3ae26dde673a24.jpg" alt="Project image #57ab51e0de3ae26dde673a24">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/57a4d6cb3e458b1f07ddd88e.jpg" alt="Project image #57a4d6cb3e458b1f07ddd88e">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/578726ee50fe0f64996995d4.jpg" alt="Project image #578726ee50fe0f64996995d4">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/5780a8f2d1967f75762167e2.jpg" alt="Project image #5780a8f2d1967f75762167e2">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/576d01034de161a6e2bb1c7c.jpg" alt="Project image #576d01034de161a6e2bb1c7c">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/576016df8e5f05be2d83f9a3.jpg" alt="Project image #576016df8e5f05be2d83f9a3">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/573de64fc84d84f81bfb8132.jpg" alt="Project image #573de64fc84d84f81bfb8132">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/5739a9fb0ebd7d91ffea1095.jpg" alt="Project image #5739a9fb0ebd7d91ffea1095">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/5738a914954a43da9552b861.jpg" alt="Project image #5738a914954a43da9552b861">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/5731f1e46ca1e156bb0348a0.jpg" alt="Project image #5731f1e46ca1e156bb0348a0">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/5730a80b0fd52b0c1a355ce4.jpg" alt="Project image #5730a80b0fd52b0c1a355ce4">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/57357dc964b2784117d30c25.jpg" alt="Project image #57357dc964b2784117d30c25">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/5723a4dd371cfe3658263862.jpg" alt="Project image #5723a4dd371cfe3658263862">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/56ffe323f0a63c5e83b2a84c.jpg" alt="Project image #56ffe323f0a63c5e83b2a84c">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/570df85c3a7be830a0c4be35.jpg" alt="Project image #570df85c3a7be830a0c4be35">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/56d1d76d642b2dfead3ee763.jpg" alt="Project image #56d1d76d642b2dfead3ee763">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/56050cd87a53c9250fc39e62.jpg" alt="Project image #56050cd87a53c9250fc39e62">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/56e25b6db6e8f345e45b2203.jpg" alt="Project image #56e25b6db6e8f345e45b2203">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/56e62e1d8b78530f13f15bad.jpg" alt="Project image #56e62e1d8b78530f13f15bad">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/56d644378cd43e6f7916efd9.jpg" alt="Project image #56d644378cd43e6f7916efd9">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/56c6cf053d969feb4ac9395b.jpg" alt="Project image #56c6cf053d969feb4ac9395b">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/56c31e158594ba001ac89782.jpg" alt="Project image #56c31e158594ba001ac89782">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/56b06a7af21b07a3408e1018.jpg" alt="Project image #56b06a7af21b07a3408e1018">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/565c8306821ef656c9fdab0c.jpg" alt="Project image #565c8306821ef656c9fdab0c">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/569f42006528a6d430871f7e.jpg" alt="Project image #569f42006528a6d430871f7e">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/569b190161aeb6d0c61afa59.jpg" alt="Project image #569b190161aeb6d0c61afa59">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/568228783255fcb5cde418e1.jpg" alt="Project image #568228783255fcb5cde418e1">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/5688b78ed6cfa25ebdad985f.jpg" alt="Project image #5688b78ed6cfa25ebdad985f">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/56477349ac4520ead10040c9.jpg" alt="Project image #56477349ac4520ead10040c9">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/564caa5a9421d749ce83c850.jpg" alt="Project image #564caa5a9421d749ce83c850">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/564c0c27c24adb41e7820d8b.jpg" alt="Project image #564c0c27c24adb41e7820d8b">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/564b0a140bcafa143022fade.jpg" alt="Project image #564b0a140bcafa143022fade">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/5628dd50991f67d08a080dcd.jpg" alt="Project image #5628dd50991f67d08a080dcd">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/560dfe6d066ba177805d800e.jpg" alt="Project image #560dfe6d066ba177805d800e">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/560c410009224fe60de908b8.jpg" alt="Project image #560c410009224fe60de908b8">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/55f7c11a60e1297577e128d9.jpg" alt="Project image #55f7c11a60e1297577e128d9">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/55f26573e7680fc500268278.jpg" alt="Project image #55f26573e7680fc500268278">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/55e6b5d440bf696d9990a6f4.jpg" alt="Project image #55e6b5d440bf696d9990a6f4">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/55c8ddb518490a827f9afac9.jpg" alt="Project image #55c8ddb518490a827f9afac9">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/55c8394519f116c073600d2b.jpg" alt="Project image #55c8394519f116c073600d2b">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/55c20dac0fd72d31ea23a4f9.jpg" alt="Project image #55c20dac0fd72d31ea23a4f9">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/55af5cd42f36013c19f8f0b1.jpg" alt="Project image #55af5cd42f36013c19f8f0b1">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/55b44b182b93456f82e86e65.jpg" alt="Project image #55b44b182b93456f82e86e65">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/55a3d4b34aad13c1b58d6499.jpg" alt="Project image #55a3d4b34aad13c1b58d6499">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/556f43dc64d68d64d4aa7e2e.jpg" alt="Project image #556f43dc64d68d64d4aa7e2e">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/5565bb4a6aaed18952f94e44.jpg" alt="Project image #5565bb4a6aaed18952f94e44">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/5542532489ba9b090bf74fd8.jpg" alt="Project image #5542532489ba9b090bf74fd8">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/553efd18da8f6ea53c1d72fe.jpg" alt="Project image #553efd18da8f6ea53c1d72fe">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/551a867da9cc4b1c0df3e58b.jpg" alt="Project image #551a867da9cc4b1c0df3e58b">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/5506e5a602d424148a94770f.jpg" alt="Project image #5506e5a602d424148a94770f">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/5506971434c62f2bd327130a.jpg" alt="Project image #5506971434c62f2bd327130a">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/54ffa4b593ff5a4ca0765749.jpg" alt="Project image #54ffa4b593ff5a4ca0765749">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/54f533e152cd4e4e5f1fd53d.jpg" alt="Project image #54f533e152cd4e4e5f1fd53d">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/54f06b99b6c63d60e3dba052.jpg" alt="Project image #54f06b99b6c63d60e3dba052">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/54e600f44b28ef895b1f91f4.jpg" alt="Project image #54e600f44b28ef895b1f91f4">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/54d58a7145f7fe3e09632f8a.jpg" alt="Project image #54d58a7145f7fe3e09632f8a">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/54d24abfd78f3295531a620f.jpg" alt="Project image #54d24abfd78f3295531a620f">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/54a7b03270a75e40ec92b536.jpg" alt="Project image #54a7b03270a75e40ec92b536">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/549054db8ad5ae2432f4e9a7.jpg" alt="Project image #549054db8ad5ae2432f4e9a7">
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img">
+                        <img src="img/548123e04139d9f87fe402bc.jpg" alt="Project image #548123e04139d9f87fe402bc">
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+    <div class="footer-top brand">
+        <div class="wrapper">
+            <h2><span>Free</span> consultation.</h2>
+            <a href="mailto:iccecoffee@gmail.com">Get in touch</a>
+        </div>
+    </div>
+    <footer>
+        <div class="wrapper">&copy; 2024 - Maulana Agung - All right reserved</div>
+    </footer>
+
+
+    <script src="https://unpkg.com/imagesloaded@3/imagesloaded.pkgd.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+        imagesLoaded( document.querySelector('.grid'), function( instance ) {
+            var elem = document.querySelector('.grid');
+            var msnry = new Masonry( elem, {
+                itemSelector: '.grid-item',
+            });
+        });
+
+    </script>
+</body>
+</html>
